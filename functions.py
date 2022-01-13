@@ -53,7 +53,7 @@ class Functions:
                 if(index==keyword_index):
                     self.driver.go_to(self.driver.get_element_attribute(element,"href"))
         except:
-            print("An error ocurred in one of the elements")
+            print("An error occurred in one of the elements")
         
         try: 
             self.driver.wait_until_page_contains_element('//*[@id="investments-table-object_length"]/label/select',timeout=15)
@@ -67,13 +67,13 @@ class Functions:
             for element in self.driver.find_elements('//*[@id="investments-table-object"]//td[@class=" left"]'):
                 INVESTMENT_TITLE.append(element.text)
         except:
-            print("An error ocurred in one of the elements")
+            print("An error occurred in one of the elements")
 
         try:
             for element in self.driver.find_elements('css:td.right'):
                 INDIVIDUAL_INVESTMENTS.append(element.text)
         except:
-            print("An error ocurred in one of the elements")
+            print("An error occurred in one of the elements")
 
         self.list_individual_investments = {'Investment Title': INVESTMENT_TITLE, 'Total': INDIVIDUAL_INVESTMENTS}
         self.write_individual_investments_to_excel_sheet("output/file.xlsx",self.list_individual_investments,"Individual Investments")
