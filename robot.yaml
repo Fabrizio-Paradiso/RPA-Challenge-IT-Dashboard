@@ -1,0 +1,14 @@
+tasks:
+  entrypoint:
+    command:
+      - python
+      - __main__.py
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+ignoreFiles:
+  - .gitignore
+PATH:
+  - .
+PYTHONPATH:
+  - .
