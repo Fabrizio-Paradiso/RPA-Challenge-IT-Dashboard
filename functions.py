@@ -92,7 +92,6 @@ class Functions:
         except:
             print("There's no link existing for this agency")
             
-        print(len(links))
         for link in links:
 
             self.driver.go_to(link)
