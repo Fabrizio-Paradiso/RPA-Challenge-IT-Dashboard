@@ -113,7 +113,7 @@ class Functions:
                 if(self.files.get_file_extension(file) == '.crdownload' or self.files.get_file_extension(file) == '.tmp'):
                     self.files.wait_until_removed(self.files.join_path(self.files.absolute_path("output/"),file),timeout=25)
         except:
-            print("Download coudn't be finished")
+            print("Download couldn't be finished")
     
 
         
